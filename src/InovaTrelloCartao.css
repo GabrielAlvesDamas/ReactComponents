@@ -1,0 +1,65 @@
+
+.CartaoCorpo{
+    position: inherit;
+    background-color: lightgray;
+    height: 180px;
+    margin-bottom: 2%;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 5%;
+}
+
+.CartaoCabecalho{
+    display: block;
+    width: 100%;
+    background-color: burlywood;
+    height: 30%;
+    word-wrap:break-word;
+    white-space: pre-wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.SatHistoria{
+    display: inline-flex;
+    margin-left: 5%;
+    font-size: small;
+    width: 75%;
+}
+
+.Avatar{
+    float: left;
+    top: 13%;
+    left: 2%;
+}
+
+.CartaoConteudo{
+    width: 100%;
+    height: 50%;
+    display: block;
+    background-color: wheat;
+}
+
+.CartaoRodape{
+    display: block;
+    width: 100%;
+    background-color: burlywood;
+    height: 20%;
+
+}
+
+.BarraProgresso{
+    position: relative;
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.valorInput{
+    position: relative;
+    display: inline-block;
+    margin-left: 5%;
+    width: 20%;
+    height: 100%;
+}

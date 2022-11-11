@@ -1,0 +1,58 @@
+.ContainerColuna{
+    position: flex;
+    display: inline-block;
+    z-index: 2;
+    top: 0%;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    width: 250px;
+    height: 100%;
+}
+
+.CabecalhoColuna{
+    position: relative;
+    z-index: 2;
+    height: 35px;
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 2px 0px rgba(87, 87, 87, 0.363);
+}
+
+.CorpoColuna{
+    position: relative;
+    background-color: white;
+    height: 85%;
+}
+
+.RodapeColuna{
+    position: relative;
+    height: 35px;
+    background-color: whitesmoke;
+    box-shadow: 0px -5px 2px 0px rgba(87, 87, 87, 0.363);
+}
+
+.CartãoContainer{
+    position: relative;
+    height: 100%;
+    width: 95%;
+    margin-left: 2.5%;
+    overflow-y: auto;
+}
+
+
+/*scrollbar style************************/
+::-webkit-scrollbar {                 /**/
+    width: 5px;                       /**/
+}                                     /**/
+                                      /**/
+::-webkit-scrollbar-track {           /**/
+    background: transparent;          /**/
+}                                     /**/
+                                      /**/
+::-webkit-scrollbar-thumb {           /**/
+    background: lightgray;          /**/
+}                                     /**/
+                                      /**/
+::-webkit-scrollbar-thumb:hover {     /**/
+    background: gray;               /**/
+}                                     /**/
+/*scrollbar style************************/

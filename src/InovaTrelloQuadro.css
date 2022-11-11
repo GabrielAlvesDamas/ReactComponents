@@ -1,0 +1,12 @@
+.Container{
+    position: fixed;
+    z-index: 0;
+    width: 95%;
+    bottom: 0%;
+    margin-left: 2.5%;
+    height: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: aliceblue;
+}
