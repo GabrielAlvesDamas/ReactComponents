@@ -10,98 +10,83 @@
             "InfoColunas": {
                 "Id": 1,
                 "IdQuadro": 1,
-                "Colunas": {
-                    "Coluna1":  {
+                "Colunas": [
+                    {
                         "Id": 1,
                         "Descricao": "Coluna1",
                         "ControlaTempo": true,
                         "FinalizaProcesso": false,
                         "Ordem": 1,
-                        "Cartoes": {
-                            "cartao1":{
-                                
-                            },
-                            "cartao2":{
-                                
-                            },
-                            "cartao3":{
-                                
-                            }
-                        }
+                        "Cartoes": [
+                            {"Id": 1,
+                            "Descricao": "cartao1"},
+                            {"Id": 2,
+                            "Descricao": "cartao2"},
+                            {"Id": 3,
+                            "Descricao": "cartao3"}
+                        ]
                     },
-                    "Coluna2":  {
+                    {
                         "Id": 2,
                         "Descricao": "Coluna2",
                         "ControlaTempo": true,
                         "FinalizaProcesso": false,
                         "Ordem": 2,
-                        "Cartoes": {
-                            "cartao1":{
-                                
-                            },
-                            "cartao2":{
-                                
-                            },
-                            "cartao3":{
-                                
-                            }
-                        }
+                        "Cartoes": [
+                            {"Id": 1,
+                            "Descricao": "cartao1"},
+                            {"Id": 2,
+                            "Descricao": "cartao2"},
+                            {"Id": 3,
+                            "Descricao": "cartao3"}
+                        ]
                     },
-                    "Coluna3":  {
+                    {
                         "Id": 3,
                         "Descricao": "Coluna3",
                         "ControlaTempo": true,
                         "FinalizaProcesso": false,
                         "Ordem": 3,
-                        "Cartoes": {
-                            "cartao1":{
-                                
-                            },
-                            "cartao2":{
-                                
-                            },
-                            "cartao3":{
-                                
-                            }
-                        }
+                        "Cartoes": [
+                            {"Id": 1,
+                            "Descricao": "cartao1"},
+                            {"Id": 2,
+                            "Descricao": "cartao2"},
+                            {"Id": 3,
+                            "Descricao": "cartao3"}
+                        ]
                     },
-                    "Coluna4":  {
+                    {
                         "Id": 4,
                         "Descricao": "Coluna4",
                         "ControlaTempo": true,
                         "FinalizaProcesso": false,
                         "Ordem": 4,
-                        "Cartoes": {
-                            "cartao1":{
-                                
-                            },
-                            "cartao2":{
-                                
-                            },
-                            "cartao3":{
-                                
-                            }
-                        }
+                        "Cartoes": [
+                            {"Id": 1,
+                            "Descricao": "cartao1"},
+                            {"Id": 2,
+                            "Descricao": "cartao2"},
+                            {"Id": 3,
+                            "Descricao": "cartao3"}
+                        ]
                     },
-                    "Coluna5":  {
+                    {
                         "Id": 5,
                         "Descricao": "Coluna5",
                         "ControlaTempo": true,
                         "FinalizaProcesso": false,
                         "Ordem": 5,
-                        "Cartoes": {
-                            "cartao1":{
-                                
-                            },
-                            "cartao2":{
-                                
-                            },
-                            "cartao3":{
-                                
-                            }
-                        }
+                        "Cartoes": [
+                            {"Id": 1,
+                            "Descricao": "cartao1"},
+                            {"Id": 2,
+                            "Descricao": "cartao2"},
+                            {"Id": 3,
+                            "Descricao": "cartao3"}
+                        ]
                     }
-                }
+                ]
+            }
         }
     }
-}

@@ -1,23 +1,24 @@
-type CartaoInterface = {
-
+export interface CartaoInterface {
+    Id: number,
+    Descricao: string
 }
 
-type IColunas = {
+export interface IColunas {
     Id: number
     Descricao: string
     ControlaTempo: boolean
     FinalizaProcesso: boolean
     Ordem: number
-    Cartao: [CartaoInterface]
+    Cartoes: CartaoInterface[]
 }
 
-type IColunasQuadro = {
+export interface IColunasQuadro {
     Id: number
     IdQuadro: number
-    Colunas: [IColunas]
+    Colunas: IColunas[]
 }
 
-export type IQuadro = {
+export interface IQuadroInfo  {
     Id: number
     Descricao: string
     IdAreaTrabalho: number
@@ -25,5 +26,12 @@ export type IQuadro = {
     DataFinal: string
     Sprint: number
     Status: string
-    Colunas: [IColunasQuadro]
+    InfoColunas: IColunasQuadro[]
 }
+
+export interface IQuadro {
+    Id: number
+    InfoQuadro: IQuadroInfo[]
+}
+
+export default IQuadro

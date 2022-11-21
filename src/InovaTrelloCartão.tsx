@@ -24,8 +24,7 @@ function InovaTrelloCartao(props: any){
             <div className='CartaoConteudo'>
             <h1 className='SatHistoria'>História 9855</h1>
             <p className='SatHistoria' style={{display: 'block'}}>
-            Criar tela de Cadastro <br/>
-            de Desconto % por Cliente/Itens.</p>
+            {props.Descricao}</p>
             </div>
             <div className='CartaoRodape'>
               <Slider 

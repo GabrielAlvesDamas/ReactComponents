@@ -3,27 +3,30 @@ import './InovaTrelloQuadro.css';
 import InovaTrelloColunas from './InovaTrelloColunas';
 import SideBar from './sideBar';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
+import Quadro, { QuadroInfo } from './QuadroClasse';
+import ClientApollo from './Apollo';
+import GetQuadro from './Querys';
 
 
-const colunas:Array<ReactJSXElement> = [
-]
+let quadro:Quadro;
+
+const Colunas:Array<ReactJSXElement> = []
 
 
-function InovaTrelloQuadro(props: any, json:JSON) {
-    for (let i = 0; i < JSON.parse(JSON.stringify(json)); i++) {
-      colunas.push(<InovaTrelloColunas 
-        /*Id={props.Json.InfoColunas.InfoQuadroColunas.Colunas[i].Id}
-        Descricao={props.Json.InfoColunas.InfoQuadroColunas.Colunas[i].Descricao}
-        Ordem={props.Json.InfoColunas.InfoQuadroColunas.Colunas[i].Ordem}*/
-        />
-      )
-      console.log(colunas)
-    }
-  return (
-      <div className='Container'>
-        <p style={{width: "100%", height: "20%"}}>{}</p>
-        {colunas}
-      </div>
+function InovaTrelloQuadro(props: any) {
+  quadro = props.quadro
+  quadro.InfoQuadro.map((i) => {
+    i.InfoColunas.map((x) =>{
+      x.Colunas.forEach((element) => {
+        Colunas.push(<InovaTrelloColunas Id={element.Id} Descricao={element.Descricao} Ordem={element.Ordem} Cartoes={element.Cartoes}/>)
+      })
+    })
+  })
+return (
+  <div className='Container'>
+  <p style={{width: "100%", height: "0%"}}>{}</p>
+  {Colunas}
+  </div>
   );
 }
 

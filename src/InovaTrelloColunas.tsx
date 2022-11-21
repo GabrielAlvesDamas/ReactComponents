@@ -1,26 +1,16 @@
+import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import * as React from 'react';
 import InovaTrelloCartao from './InovaTrelloCartão';
 import './InovaTrelloColunas.css';
 
-const cartoes = [                  
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
-<InovaTrelloCartao satText='Prior: 16 - 335 / 2021 - Pontos[8 / 8]'/>,
+const cartoes: Array<ReactJSXElement> = [                  
+
 ]
 
 function InovaTrelloColunas(props: any) {
+  props.Cartoes.forEach((i: any) => {
+    cartoes.push(<InovaTrelloCartao Id={i.Id} Descricao={i.Descricao}/>)
+  })
   return (
     <div className='ContainerColuna'>
         <div className='CabecalhoColuna'/>
