@@ -4,6 +4,7 @@ import TrelloQuadro from './TrelloQuadro';
 import { useQuery } from '@apollo/client';
 import GetQuadro from './Querys';
 import { Cartao, Colunas, ColunasQuadro, Quadro } from './QuadroClasse';
+import SideBar from './sideBar';
 
 
 
@@ -11,19 +12,19 @@ let quadro: Quadro = new Quadro();
 
 function CarregarQuadro() {
   const { loading, error, data } = useQuery(GetQuadro, { fetchPolicy: 'cache-and-network' })
-  if (loading) return <span>loading</span>
-  if (error) return <span>error</span>
+  if (loading) return 
+  if (error) return 
   quadro.id = data.quadro.id
   /*data.quadro.infoQuadro.map((element: any) => {
-    quadro.InfoQuadro.push({
-      Id: element.id,
-      DataInicial: element.dataInicial,
-      DataFinal: element.dataFinal,
-      Descricao: element.descricao,
-      Sprint: element.sprint,
-      Status: element.status,
-      IdAreaTrabalho: element.idAreaTrabalho,
-      InfoColunas: [element.infoColunas.map((element: ColunasQuadro) => {})]
+    quadro.infoQuadro.push({
+      id: element.id,
+      dataInicial: element.dataInicial,
+      dataFinal: element.dataFinal,
+      descricao: element.descricao,
+      sprint: element.sprint,
+      status: element.status,
+      idAreaTrabalho: element.idAreaTrabalho,
+      infoColunas: [element.infoColunas.map((element: ColunasQuadro) => {})]
     });
   })
   console.log(quadro)*/
@@ -83,7 +84,9 @@ function App() {
   return (
     <div>
       <body style={{ overflow: 'auto' }}>
+        <SideBar>
         {CarregarQuadro()}
+        </SideBar>
       </body>
     </div>
   );

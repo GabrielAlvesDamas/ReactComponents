@@ -33,7 +33,7 @@ function SideBar(props: any) {
     <div>
       <div className='sideMenu' id='menu'>
             <button className='expandCollapseButton'  onClick={expandCollapse}>
-            <div className='IdocTituloContainer'>
+            <div className='TituloContainer'>
             <p>Titulo</p>
             </div>
             <Avatar className='IconBack' variant='rounded'>
