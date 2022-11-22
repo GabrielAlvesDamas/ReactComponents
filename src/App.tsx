@@ -75,7 +75,6 @@ function CarregarQuadro() {
     })
     infoColunas = []
   });
-  console.log(quadro)
   return <TrelloQuadro quadro={quadro} />
 }
 

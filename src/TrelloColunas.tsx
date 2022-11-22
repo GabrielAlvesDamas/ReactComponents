@@ -14,7 +14,7 @@ function TrelloColunas(props: any) {
   return (
     <div className='ContainerColuna'>
         <div className='CabecalhoColuna'>
-          <h5 className='TituloColuna'>{props.Titulo}</h5>
+          <h5 className='TituloColuna'>{props.Descricao}</h5>
           <img src={optionIcon} className='BotaoConfig'/>
         </div>
             <div className='CorpoColuna'> 

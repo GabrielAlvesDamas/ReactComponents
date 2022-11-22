@@ -19,8 +19,7 @@ function TrelloQuadro(props: any) {
                       Id={element.id} 
                       Descricao={element.descricao} 
                       Ordem={element.ordem} 
-                      Cartoes={element.cartoes}
-                      Titulo={'À Fazer'/*element.Titulo*/}/>)
+                      Cartoes={element.cartoes}/>)
       })
     })
   })
