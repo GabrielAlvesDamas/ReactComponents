@@ -6,15 +6,7 @@ import expandCollapse from './Typescript';
 import { ChangeEvent, useState } from 'react';
 import { Avatar, ButtonGroup } from '@mui/material';
 
-interface rsCliente{
-  Nome: string,
-  Sobrenome: string,
-  Cidade: string,
-  Endereco: string,
-  Cep: string,
-  Telefone : string,
-  Celular: string,
-}
+
 const buttons = [
   <Button className='sideMenuButtons'>Relatório</Button>,
   <Button className='sideMenuButtons'>Sistema</Button>,
@@ -42,7 +34,7 @@ function SideBar(props: any) {
       <div className='sideMenu' id='menu'>
             <button className='expandCollapseButton'  onClick={expandCollapse}>
             <div className='IdocTituloContainer'>
-            <p>InovaDoc</p>
+            <p>Titulo</p>
             </div>
             <Avatar className='IconBack' variant='rounded'>
               <img src={maximize} alt="maximizeIcon" className='expandCollapseImg' id='expandCollapseImage'/>

@@ -1,12 +1,10 @@
 import * as React from 'react';
 import './App.css';
-import InovaTrelloQuadro from './InovaTrelloQuadro';
-import { DocumentNode, useQuery } from '@apollo/client';
+import TrelloQuadro from './TrelloQuadro';
+import { useQuery } from '@apollo/client';
 import GetQuadro from './Querys';
-import SideBar from './sideBar';
-import Quadro, { Cartao, Colunas, ColunasQuadro, QuadroInfo } from './QuadroClasse';
-import IQuadro from './QuadroInterface';
-import ClientApollo from './Apollo';
+import { Cartao, Colunas, ColunasQuadro, Quadro } from './QuadroClasse';
+
 
 
 let quadro: Quadro = new Quadro();
@@ -15,10 +13,20 @@ function CarregarQuadro() {
   const { loading, error, data } = useQuery(GetQuadro, { fetchPolicy: 'cache-and-network' })
   if (loading) return <span>loading</span>
   if (error) return <span>error</span>
-  quadro.Id = data.quadro.id
-  /*data.quadro.infoQuadro.map((element: Quadro) => {
-    
-  })*/
+  quadro.id = data.quadro.id
+  /*data.quadro.infoQuadro.map((element: any) => {
+    quadro.InfoQuadro.push({
+      Id: element.id,
+      DataInicial: element.dataInicial,
+      DataFinal: element.dataFinal,
+      Descricao: element.descricao,
+      Sprint: element.sprint,
+      Status: element.status,
+      IdAreaTrabalho: element.idAreaTrabalho,
+      InfoColunas: [element.infoColunas.map((element: ColunasQuadro) => {})]
+    });
+  })
+  console.log(quadro)*/
   data.quadro.infoQuadro.forEach((element: any) => {
     var infoColunas: ColunasQuadro[] = []
 
@@ -30,41 +38,44 @@ function CarregarQuadro() {
 
               element.cartoes.forEach((element: any) => {
                 cartoes.push({
-                  Id: element.id,
-                  Descricao: element.descricao
+                  id: element.id,
+                  descricao: element.descricao
                 })
               })
 
             colunas.push({
-              Id: element.id,
-              ControlaTempo: element.controlaTempo,
-              FinalizaProcesso: element.finalizaProcesso,
-              Ordem: element.ordem,
-              Descricao: element.descricao,
-              Cartoes: cartoes,
+              id: element.id,
+              controlaTempo: element.controlaTempo,
+              finalizaProcesso: element.finalizaProcesso,
+              ordem: element.ordem,
+              descricao: element.descricao,
+              cartoes: cartoes,
             })
+            cartoes = []
           })
 
         infoColunas.push({
-          Id: element.id,
-          IdQuadro: element.idQuadro,
-          Colunas: colunas
+          id: element.id,
+          idQuadro: element.idQuadro,
+          colunas: colunas
         })
+        colunas = []
       })
 
-    quadro.InfoQuadro.push({
-      Id: element.id,
-      Descricao: element.descricao,
-      DataFinal: element.dataInicial,
-      DataInicial: element.dataFinal,
-      IdAreaTrabalho: element.idAreaTrabalho,
-      Sprint: element.sprint,
-      Status: element.status,
-      InfoColunas: infoColunas,
+    quadro.infoQuadro.push({
+      id: element.id,
+      descricao: element.descricao,
+      dataFinal: element.dataInicial,
+      dataInicial: element.dataFinal,
+      idAreaTrabalho: element.idAreaTrabalho,
+      sprint: element.sprint,
+      status: element.status,
+      infoColunas: infoColunas,
     })
+    infoColunas = []
   });
-  //console.log(quadro)
-  return <InovaTrelloQuadro quadro={quadro} />
+  console.log(quadro)
+  return <TrelloQuadro quadro={quadro} />
 }
 
 

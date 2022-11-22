@@ -1,15 +1,13 @@
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import * as React from 'react';
-import InovaTrelloCartao from './InovaTrelloCartão';
+import TrelloCartao from './InovaTrelloCartão';
 import './InovaTrelloColunas.css';
 
-const cartoes: Array<ReactJSXElement> = [                  
 
-]
-
-function InovaTrelloColunas(props: any) {
+function TrelloColunas(props: any) {
+  let cartoes: Array<ReactJSXElement> = []
   props.Cartoes.forEach((i: any) => {
-    cartoes.push(<InovaTrelloCartao Id={i.Id} Descricao={i.Descricao}/>)
+    cartoes.push(<TrelloCartao Id={i.Id} Descricao={i.Descricao}/>)
   })
   return (
     <div className='ContainerColuna'>
@@ -25,4 +23,4 @@ function InovaTrelloColunas(props: any) {
   );
 }
 
-export default InovaTrelloColunas;
+export default TrelloColunas;

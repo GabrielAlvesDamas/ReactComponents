@@ -1,39 +1,39 @@
-import IQuadro, { CartaoInterface, IColunas, IColunasQuadro, IQuadroInfo } from './QuadroInterface';
+import IQuadro, { ICartao, IColunas, IColunasQuadro, IQuadroInfo } from './QuadroInterface';
 
 export class Quadro implements IQuadro {
-    Id: number = 0
-    InfoQuadro: QuadroInfo[] = []
+    id: number = 0
+    infoQuadro: QuadroInfo[] = []
 }
 
 export class QuadroInfo implements IQuadroInfo {
-    Id: number = 0
-    Descricao: string = ""
-    IdAreaTrabalho: number = 0
-    DataInicial: string = ""
-    DataFinal: string = ""
-    Sprint: number = 0
-    Status: string = ""
-    InfoColunas: ColunasQuadro[] = []
+    id: number = 0
+    descricao: string = ""
+    idAreaTrabalho: number = 0
+    dataInicial: string = ""
+    dataFinal: string = ""
+    sprint: number = 0
+    status: string = ""
+    infoColunas: ColunasQuadro[] = []
 }
 
 export class ColunasQuadro implements IColunasQuadro {
-    Id: number = 0
-    IdQuadro: number = 0
-    Colunas: Colunas[] = []
+    id: number = 0
+    idQuadro: number = 0
+    colunas: Colunas[] = []
 }
 
 export class Colunas implements IColunas {
-    Id: number = 0
-    Descricao: string = ""
-    ControlaTempo: boolean = false
-    FinalizaProcesso: boolean = false
-    Ordem: number = 0
-    Cartoes: Cartao[] = []
+    id: number = 0
+    descricao: string = ""
+    controlaTempo: boolean = false
+    finalizaProcesso: boolean = false
+    ordem: number = 0
+    cartoes: Cartao[] = []
 }
 
-export class Cartao implements CartaoInterface {
-    Id: number = 0
-    Descricao: string = ""
+export class Cartao implements ICartao {
+    id: number = 0
+    descricao: string = ""
 }
 
 export default Quadro;

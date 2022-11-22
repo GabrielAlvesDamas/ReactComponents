@@ -1,37 +1,37 @@
-export interface CartaoInterface {
-    Id: number,
-    Descricao: string
+export interface ICartao {
+    id: number,
+    descricao: string
 }
 
 export interface IColunas {
-    Id: number
-    Descricao: string
-    ControlaTempo: boolean
-    FinalizaProcesso: boolean
-    Ordem: number
-    Cartoes: CartaoInterface[]
+    id: number
+    descricao: string
+    controlaTempo: boolean
+    finalizaProcesso: boolean
+    ordem: number
+    cartoes: ICartao[]
 }
 
 export interface IColunasQuadro {
-    Id: number
-    IdQuadro: number
-    Colunas: IColunas[]
+    id: number
+    idQuadro: number
+    colunas: IColunas[]
 }
 
 export interface IQuadroInfo  {
-    Id: number
-    Descricao: string
-    IdAreaTrabalho: number
-    DataInicial: string
-    DataFinal: string
-    Sprint: number
-    Status: string
-    InfoColunas: IColunasQuadro[]
+    id: number
+    descricao: string
+    idAreaTrabalho: number
+    dataInicial: string
+    dataFinal: string
+    sprint: number
+    status: string
+    infoColunas: IColunasQuadro[]
 }
 
 export interface IQuadro {
-    Id: number
-    InfoQuadro: IQuadroInfo[]
+    id: number
+    infoQuadro: IQuadroInfo[]
 }
 
 export default IQuadro
