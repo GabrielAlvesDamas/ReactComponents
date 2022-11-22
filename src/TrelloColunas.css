@@ -4,9 +4,10 @@
     z-index: 2;
     top: 0%;
     margin-top: 1vw;
-    margin-left: 1vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
     width: 270px;
-    height: 95%;
+    height: 93%;
     box-shadow: 0px 0px 8px 0px gray;
 }
 

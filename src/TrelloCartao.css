@@ -85,18 +85,19 @@
 
 .AvatarContainer{
     display: inline-block;
-    margin-left: 15%;
-    margin-top: 5%;
+    margin-left: 9%;
+    margin-top: 2%;
     height: 30%;
-    width: 50%;
+    width: 59%;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: visible;
     overflow-y: hidden;
+    text-align: end;
 }
 
 .Avatar{
     display: inline-block;
-    margin-left: 2%;
+    margin-left: -3%;
     height: 25px;
     width: 25px;
 }

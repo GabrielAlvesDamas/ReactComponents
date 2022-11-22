@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import GetQuadro from './Querys';
 import { Cartao, Colunas, ColunasQuadro, Quadro } from './QuadroClasse';
 import SideBar from './sideBar';
+import { Chip, CircularProgress } from '@mui/material';
 
 
 
@@ -12,8 +13,10 @@ let quadro: Quadro = new Quadro();
 
 function CarregarQuadro() {
   const { loading, error, data } = useQuery(GetQuadro, { fetchPolicy: 'cache-and-network' })
-  if (loading) return 
-  if (error) return 
+  if (loading) return <CircularProgress sx={{position: 'relative', left: '47%', marginTop: '20%'}} />
+  if (error) {var erroString = "Erro ao carregar dados: "
+                  erroString += error.message
+        return <Chip color='error' label={erroString} sx={{position: 'relative', left: '0vw', marginTop: '45%'}}/>}
   quadro.id = data.quadro.id
   /*data.quadro.infoQuadro.map((element: any) => {
     quadro.infoQuadro.push({

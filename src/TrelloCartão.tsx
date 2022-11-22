@@ -5,6 +5,7 @@ import optionIcon from './fontisto-master/icons/svg/interfaces/move-h-a.svg'
 import * as React from 'react';
 import './TrelloCartao.css';
 import Etiqueta from './EtiquetasQuadro';
+import avatar from './avatar.png'
 
 function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
   return (
@@ -26,9 +27,11 @@ let Etiquetas: Array<ReactJSXElement> = [
 
 
 let avatares: Array<ReactJSXElement> = [
-  <Avatar className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
-  <Avatar className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
-  <Avatar className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
+  <Avatar src={avatar} className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
+  <Avatar src={avatar} className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
+  <Avatar src={avatar} className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
+  <Avatar src={avatar} className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
+  <Avatar src={avatar} className='Avatar'/*O avatar deverá ser lido a partir do banco de dados como prop do componente*//>,
 ]
 
 function TrelloCartao(props: any){
@@ -48,12 +51,12 @@ function TrelloCartao(props: any){
                 {Etiquetas}
               </div>
               <img src={optionIcon} className='BotaoConfigCartao'/>
-                <p className='SatHistoria'>{/*satText*/"Sat: 199155/2022 - Hist: 9120/2022"}</p>
+                <p className='SatHistoria'>{/*satText*/"Sat: 487 / 2022 - Hist: 9932"}</p>
             </div>
             <div className='CartaoConteudo'>
             <div className='HistoriaContainer'>
               <p className='HistoriaTexto'>
-              {/*props.Descricao*/"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque purus semper."}
+              {/*props.Descricao*/"Alterar montagem do Histórico do Lançamento de Caixa, para poder gravar o cheque informado na Quitação do Contas a Pagar."}
               </p>
             </div>
             <Button variant='outlined' className='BotaoAbrir'>Abrir</Button>
@@ -62,8 +65,8 @@ function TrelloCartao(props: any){
               </div>
             </div>
             <div className='CartaoRodape'>
-              <p className='PontuacaoInicial'>Pontuação inicial: 03</p>
-              <p className='PontuacaoFinal'>Pontuação final: 03</p>
+              <p className='PontuacaoInicial'>Pontuação inicial: 0</p>
+              <p className='PontuacaoFinal'>Pontuação final: 0</p>
               <div className='ControleTempoContainer'>
               <Button variant='contained' className='BotaoIniciar'>Iniciar</Button>
               <div className='TempoContainer'>
